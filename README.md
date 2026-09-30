@@ -1,66 +1,7 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <title>pw-aidilyufiqhar041 | Repository Latihan</title>
-  <style>
-    :root{--ink:#20304a;--muted:#66758d;--accent:#0645ad;--tile:#e5efff;--tile-hover:#d7e6ff;--border:#d1def2;--panel:#f5f8fe}
-    *{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:16px/1.55 Arial,sans-serif;-webkit-font-smoothing:antialiased}.page{width:min(1080px,calc(100% - 48px));margin:auto}
-    header{min-height:100px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #edf0f4}.profile-photo{width:58px;height:58px;flex:none;object-fit:cover;border-radius:50%;border:2px solid #d7e4f7;background:#edf2fa}.brand{font-size:16px;font-weight:700;letter-spacing:.01em}
-    .intro{min-height:260px;padding:38px 0;display:flex;align-items:center;justify-content:space-between;gap:32px}.intro-copy{flex:1}.intro h1{font-size:clamp(32px,4vw,43px);line-height:1.12;letter-spacing:-.04em;margin:0 0 10px}.intro p{margin:0;color:var(--muted)}.profile{display:inline-flex;align-items:center;gap:9px;margin-top:20px;padding:11px 17px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;transition:background .16s}.profile:hover{background:#043887}.institution-logo{display:block;width:min(230px,30%);height:190px;object-fit:contain;flex:none}
-    .menu-panel{background:var(--panel);border:1px solid #e7eef9;border-radius:14px;padding:24px}.menu-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 17px}.menu-head h2{font-size:19px;margin:0;letter-spacing:-.02em}.term{font-size:13px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.meeting{width:100%;min-height:68px;display:flex;align-items:center;gap:12px;padding:11px 14px;border:1px solid var(--border);border-radius:10px;background:var(--tile);color:var(--ink);text-align:left;font:inherit;cursor:pointer;transition:background .16s,border-color .16s}.meeting:hover{background:var(--tile-hover);border-color:#b7ccef}.meeting:focus-visible,.profile:focus-visible,.close:focus-visible{outline:3px solid #86aee8;outline-offset:2px}.number{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:9px;background:#cfe0ff;color:#0645ad;font-size:12px;font-weight:700}.label{font-size:14px;font-weight:700}.arrow{margin-left:auto;color:#5277ad;font-size:17px}.footer{padding:21px 0 28px;color:#8a94a3;font-size:12px}
-    dialog{width:min(340px,calc(100% - 32px));border:1px solid var(--border);border-radius:13px;padding:22px;box-shadow:0 16px 48px #25354a2b;color:var(--ink)}dialog::backdrop{background:#26354a55}dialog p{margin:0 0 16px}.close{border:0;border-radius:7px;padding:8px 14px;background:var(--blue);color:white;font-weight:700;cursor:pointer}
-    @media(max-width:760px){.page{width:calc(100% - 32px)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.menu-panel{padding:19px}.intro{min-height:220px;padding:30px 0;gap:20px}.institution-logo{width:190px;height:155px}}
-    @media(max-width:430px){.page{width:calc(100% - 24px)}header{min-height:82px;gap:10px}.profile-photo{width:46px;height:46px}.brand{font-size:13px}.intro{min-height:190px;padding:25px 0;gap:10px}.intro h1{font-size:29px}.institution-logo{width:120px;height:120px}.menu-panel{padding:14px;border-radius:12px}.menu-head{align-items:flex-start;flex-direction:column;gap:2px;margin-bottom:12px}.grid{gap:8px}.meeting{min-height:57px;padding:8px;gap:8px;border-radius:9px}.number{width:30px;height:30px;border-radius:8px;font-size:11px}.label{font-size:13px}.arrow{font-size:15px}}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
-  </style>
-</head>
-<body>
-  <header class="page">
-    <img class="profile-photo" src="../img/profile.png" alt="Foto profil">
-    <div class="brand">pw-aidilyufiqhar041</div>
-  </header>
-  <main class="page">
-    <section class="intro">
-      <div class="intro-copy">
-        <h1>Repository Latihan</h1>
-        <p>Pertemuan 1–16 · 2026 Ganjil</p>
-        <a class="profile" href="pertemuan1/tugasprofile.html">Lihat Profil Saya <span aria-hidden="true">↗</span></a>
-      </div>
-      <img class="institution-logo" src="../img/logo.png" alt="Logo Atma Luhur">
-    </section>
-    <section class="menu-panel" aria-labelledby="menu-title">
-      <div class="menu-head"><h2 id="menu-title">Menu Pertemuan</h2><span class="term">Pilih pertemuan</span></div>
-      <div class="grid" id="menu"></div>
-    </section>
-  </main>
-  <footer class="page footer">2026 Ganjil</footer>
-  <dialog id="notice" aria-labelledby="notice-text">
-    <p id="notice-text">Folder ini belum terisi.</p>
-    <button class="close" id="close" type="button">Tutup</button>
-  </dialog>
-  <script>
-    const menu = document.getElementById('menu');
-    const notice = document.getElementById('notice');
-    document.getElementById('close').addEventListener('click', () => notice.close());
-    for (let n = 1; n <= 16; n++) {
-      const button = document.createElement('button');
-      button.className = 'meeting';
-      button.type = 'button';
-      button.innerHTML = `<span class="number">${String(n).padStart(2,'0')}</span><span class="label">Pertemuan ${n}</span><span class="arrow" aria-hidden="true">›</span>`;
-      button.addEventListener('click', async () => {
-        const folder = `pertemuan${n}/`;
-        if (location.protocol === 'file:') { location.href = folder; return; }
-        try {
-          const response = await fetch(folder, { method: 'HEAD', cache: 'no-store' });
-          if (response.ok) location.href = folder;
-          else notice.showModal();
-        } catch { notice.showModal(); }
-      });
-      menu.append(button);
-    }
-  </script>
-</body>
-</html>
+# pw-aidilyufiqhar041
+
+<img src="logo.png" alt="logo ISB" align="left" width="200">
+
+Repository latihan pertemuan 1 sampai dengan pertemuan 16, 2026 Ganjil
+
+[Lihat Profil Saya](pertemuan2/tugasprofile.html)
