@@ -4,7 +4,7 @@
 
 /* Header kampus: teks hitam, hierarki ukuran jelas */
 .brand{color:#111;text-decoration:none}
-.brand span{font-size:16px;color:#111}
-.brand b{font-size:23px;color:#111}
-@media(max-width:760px){.brand span{font-size:13px}.brand b{font-size:19px}}
-@media(max-width:480px){.brand span{font-size:10px}.brand b{font-size:15px}}
+.brand span{font-size:15px;color:#111}
+.brand b{font-size:25px;color:#111}
+@media(max-width:760px){.brand span{font-size:12px}.brand b{font-size:20px}}
+@media(max-width:480px){.brand span{font-size:10px}.brand b{font-size:16px}}
