@@ -1,2 +1,1 @@
-/* Styles khusus halaman Contact */
-.section-card{padding:24px}.section-card h2{margin:0 0 10px}.section-card p{margin:0;color:var(--muted)}
+.contact-grid{padding:8px 0 24px}.contact-card:focus-visible{outline:3px solid #168ed5;outline-offset:3px}
